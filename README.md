@@ -1,2 +1,2 @@
-# ML_gasto_mensual_amazon
-Modelo de Machine Learning capaz de predecir el gasto mensual estimado de los clientes de Amazon a partir de sus hábitos de compra y comportamiento en la plataforma.
+# ML_rendimiento
+Modelo de Machine Learning capaz de predecir el capaz de predecir el rendimiento académico y la posible deserción escolar (dropout) de los estudiantes a partir de sus características demográficas, socioeconómicas, antecedentes académicos y datos del momento de su inscripción.
