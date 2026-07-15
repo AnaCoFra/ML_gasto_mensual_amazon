@@ -7,6 +7,7 @@ scikit-learn>=1.4.0
 pytest>=8.0.0
 jupyter>=1.0.0
 ipykernel>=6.29.0
+imbalanced-learn==0.12.3
 
 # integración con Tools_ML_EDA
 git+https://github.com/AnaCoFra/Tools_ML_EDA.git@main
