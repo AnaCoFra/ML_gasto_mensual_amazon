@@ -1,5 +1,5 @@
 # ML_RENDIMIENTO — Predicción de abandono estudiantil
-### Trabajo realizado por Paula Comás y Ana Corrochano para el bootcamp de Data Science y Artificial Inteligence
+### Trabajo realizado por Paula Comas y Ana Corrochano para el bootcamp de Data Science y Artificial Inteligence
 
 Modelo de clasificación multiclase para identificar, **en el momento de la matrícula**, qué
 estudiantes tienen mayor riesgo de abandonar los estudios, con el objetivo de activar medidas de
@@ -25,20 +25,24 @@ apoyo tempranas (becas, tutorías, planes de pago flexibles, seguimiento académ
 ML_rendimiento/
 ├── src/
 │   ├── data_sample/
-│   │   └── data.csv                       # Dataset de origen
-│   ├── notebooks/src/
-│   │   ├── artifacts/                     # Artefactos intermedios (.joblib) entre notebooks
-│   │   │   └── predicciones_dropout.csv   # Salida de predict_batch.py
-│   │   ├── models/
-│   │   │   └── modelo_dropout_final.joblib   # Modelo final, listo para producción
-│   │   ├── 01_EDA.ipynb                   # Análisis exploratorio
-│   │   ├── 02_feature-eng.ipynb           # Selección de variables, decisión de leakage
-│   │   ├── 03_preprocessing.ipynb         # Split train/test + pipeline de preprocesado
-│   │   ├── 04_modeling.ipynb              # Comparativa de modelos + tuning
-│   │   └── 05_evaluation.ipynb            # Evaluación final + guardado del modelo
+│   │   └── data.csv                              # Dataset de origen
+|   ├── models/
+│   │   └── modelo_dropout_final.joblib           # Modelo final, listo para producción
+|   ├── img/                              
+│   ├── notebooks/
+│   │   ├── src/                     
+│   │   │   └── artifacts/                        # Artefactos intermedios (.joblib) entre notebooks
+│   │   │       └── predicciones_dropout.csv      # Salida de predict_batch.py
+│   │   ├── 01_EDA.ipynb                          # Análisis exploratorio
+│   │   ├── 02_feature-eng.ipynb                  # Selección de variables, decisión de leakage
+│   │   ├── 03_preprocessing.ipynb                # Split train/test + pipeline de preprocesado
+│   │   ├── 04_modeling.ipynb                     # Comparativa de modelos + tuning
+│   │   └── 05_evaluation.ipynb                   # Evaluación final + guardado del modelo
 │   └── utils/
-│       └── predict_batch.py               # Script para generar predicciones en batch
+│       └── predict_batch.py                      # Script para generar predicciones en batch
 ├── venv/
+├── ML_RENDIMIENTO_Informe.pdf
+├── main.ipynb
 ├── requirements.txt
 └── README.md
 ```
@@ -129,7 +133,7 @@ de tu propio CSV (debe tener las mismas 20 columnas usadas en entrenamiento).
 ```python
 import joblib
 
-modelo = joblib.load('src/notebooks/src/models/modelo_dropout_final.joblib')
+modelo = joblib.load('src/models/modelo_dropout_final.joblib')
 
 predicciones = modelo.predict(X_nuevo)        # clase predicha
 probabilidades = modelo.predict_proba(X_nuevo)  # probabilidad de cada clase
@@ -138,4 +142,4 @@ probabilidades = modelo.predict_proba(X_nuevo)  # probabilidad de cada clase
 El objeto guardado es el **pipeline completo** (preprocesado + modelo), así que no hace falta
 repetir el escalado ni el one-hot encoding manualmente.
 
-### Trabajo realizado por Paula Comás y Ana Corrochano
+### Trabajo realizado por Paula Comas y Ana Corrochano
